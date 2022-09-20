@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           backgroundColor: Colors.pink,
           title: Text(
-            'ROCK PAPPER SICSSORS',
+            'ROCK PAPPER SICSSOR',
           ),
         ),
         body: Center(
@@ -48,20 +48,30 @@ class _MyAppState extends State<MyApp> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                      padding: EdgeInsets.all(10),
-                      child: Image.asset(
-                        'assets/i_1.png',
-                        height: 100,
-                        width: 60,
-                      )),
-                  Container(
-                      padding: EdgeInsets.all(10),
-                      child: Image.asset(
-                        'assets/i_2,png',
-                        height: 100,
-                        width: 60,
-                      )),
+                  Column(
+                    children: [
+                      Container(
+                          padding: EdgeInsets.all(10),
+                          child: Image.asset(
+                            'assets/i_$num1.png',
+                            height: 100,
+                            width: 60,
+                          )),
+                      Text('player 1'),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                          padding: EdgeInsets.all(10),
+                          child: Image.asset(
+                            'assets/i_$num2.png',
+                            height: 100,
+                            width: 60,
+                          )),
+                      Text('player 2'),
+                    ],
+                  ),
                 ],
               ),
             ),
